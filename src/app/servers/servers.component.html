@@ -1,0 +1,19 @@
+<h4>Servers</h4>
+<div class="container">
+  <input
+    type="text"
+    class="form-control"
+    (input)="onUpdateServerName($event)"
+  />
+  <button
+    (click)="onCreateServer()"
+    [disabled]="!allowNewServer"
+    class="btn btn-primary"
+  >
+    Add Server
+  </button>
+  <p>Server name: {{ serverName }}</p>
+  <p>Server status: {{ serverCreationStatus }}</p>
+  <app-server></app-server>
+  <app-server></app-server>
+</div>
